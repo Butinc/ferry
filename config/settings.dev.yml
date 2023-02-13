@@ -2,7 +2,7 @@ script:
   path: ./static/scripts
 settings:
   application:
-    domain: localhost:8002
+    domain: dev.ferry.com:8002
     host: 0.0.0.0
     ishttps: false
     mode: dev
@@ -14,9 +14,9 @@ settings:
     dbtype: mysql
     host: 127.0.0.1
     name: ferry
-    password: your password
+    password: 123456
     port: 3306
-    username: ferry
+    username: root
   domain:
     gethost: 1
     url: localhost:9527
