@@ -100,10 +100,10 @@ bash build.sh start
 群里只要不说骂人、侮辱人之类人身攻击的话，您就可以畅所欲言，有bug我及时修改，使用中有不懂的，我会及时回复，感谢。
 
 <p>
-  <img width="300" src="https://www.fdevops.com/wp-content/uploads/2021/12/1640275868-2021122316110810.png">
+  <img width="300" src="https://www.fdevops.com/wp-content/uploads/2022/10/1667027272-WechatIMG201.jpeg">
 </p>
 
-QQ群 3：767524537
+QQ群 4：493389089
 
 [兰玉磊的技术博客](https://www.fdevops.com/)
 
@@ -117,16 +117,20 @@ QQ群 3：767524537
 
 本人微信：lanyulei666
 
+## 战略合作
+
+* [VForm 一款高效的Vue 2 / Vue3 的低代码表单可视化设计，一键生成源码，享受更多摸鱼时间](https://vform666.com/vform3.html)
+
 ## 特别感谢
-[go-amdin # 不错的后台开发框架](https://github.com/go-admin-team/go-admin)
+* [go-amdin # 不错的后台开发框架](https://github.com/go-admin-team/go-admin)
 
-[vue-element-admin # 不错的前端模版框架](https://github.com/PanJiaChen/vue-element-admin)
+* [vue-element-admin # 不错的前端模版框架](https://github.com/PanJiaChen/vue-element-admin)
 
-[vue-form-making # 表单设计器，开源版本比较简单，如果有能力的话可以自己进行二次开发 ](https://github.com/GavinZhuLei/vue-form-making.git)
+* [vue-form-making # 表单设计器，开源版本比较简单，如果有能力的话可以自己进行二次开发 ](https://github.com/GavinZhuLei/vue-form-making.git)
 
-[wfd-vue # 流程设计器](https://github.com/guozhaolong/wfd-vue)
+* [wfd-vue # 流程设计器](https://github.com/guozhaolong/wfd-vue)
 
-[machinery # 任务队列](https://github.com/RichardKnop/machinery.git)
+* [machinery # 任务队列](https://github.com/RichardKnop/machinery.git)
 
 等等...
 
