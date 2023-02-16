@@ -14,8 +14,8 @@ settings:
     dbtype: mysql
     host: 127.0.0.1
     name: ferry
-    password: 123456
-    port: 3306
+    password: root
+    port: 3307
     username: root
   domain:
     gethost: 1
