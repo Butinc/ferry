@@ -2,9 +2,10 @@ package main
 
 import (
 	"fmt"
-	"github.com/gin-gonic/gin"
 	"net/http"
 	"time"
+
+	"github.com/gin-gonic/gin"
 )
 
 func MiddleWare() gin.HandlerFunc {
@@ -27,7 +28,7 @@ type Login struct {
 
 func main() {
 	r := gin.Default()
-	r.GET("/v1/measure/:user/:password", MiddleWare(), func(c *gin.Context) {
+	r.GET("/api/v1/measure/:user/:password", MiddleWare(), func(c *gin.Context) {
 		var json Login
 		err := c.ShouldBindUri(&json)
 		if err != nil {
@@ -35,7 +36,10 @@ func main() {
 			return
 		}
 		if json.User != "xize" || json.Password != "123456" {
-			c.JSON(http.StatusBadRequest, gin.H{"status": "304"})
+			c.JSON(http.StatusBadRequest, gin.H{
+				"message": "用户名或密码错误",
+				"status":  "304",
+			})
 			return
 		}
 
