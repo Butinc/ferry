@@ -14,8 +14,8 @@ settings:
     dbtype: mysql
     host: 127.0.0.1
     name: ferry
-    password: root
-    port: 3307
+    password: Root-000
+    port: 3306
     username: root
   domain:
     gethost: 1
@@ -27,7 +27,7 @@ settings:
     port: 465
     user: fdevops@163.com
   gorm:
-    logmode: 0
+    logmode: 1
     maxidleconn: 0
     maxopenconn: 20000
   jwt:
