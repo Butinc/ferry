@@ -100,12 +100,22 @@ func UpdateClassify(c *gin.Context) {
 		return
 	}
 
+	if classifyValue.Id == 0 {
+		app.Error(c, -1, errors.New("id is required"), "")
+		return
+	}
+
 	// 更新
-	err = orm.Eloquent.Model(&classifyValue).
+	result := orm.Eloquent.Model(&classifyValue).
 		Where("id = ?", classifyValue.Id).
-		Update("name", classifyValue.Name).Error
-	if err != nil {
+		Update("name", classifyValue.Name)
+	if result.Error != nil {
 		app.Error(c, -1, err, "")
+		return
+	}
+	rowsAffected := result.RowsAffected
+	if rowsAffected == 0 {
+		app.Error(c, -1, errors.New("更新流程分类失败"), "")
 		return
 	}
 
