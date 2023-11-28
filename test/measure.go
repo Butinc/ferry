@@ -27,7 +27,7 @@ type Login struct {
 
 func main() {
 	r := gin.Default()
-	r.GET("/v1/measure/:user/:password", MiddleWare(), func(c *gin.Context) {
+	r.GET("/api/v1/measure/:user/:password", MiddleWare(), func(c *gin.Context) {
 		var json Login
 		err := c.ShouldBindUri(&json)
 		if err != nil {

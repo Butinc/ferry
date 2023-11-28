@@ -34,8 +34,9 @@ func TemplateList(c *gin.Context) {
 		Select("p_tpl_info.id, p_tpl_info.create_time, p_tpl_info.update_time, p_tpl_info.`name`, p_tpl_info.`creator`, sys_user.username as create_user, sys_user.nick_name as create_name")
 
 	result, err := pagination.Paging(&pagination.Param{
-		C:  c,
-		DB: db,
+		C:       c,
+		DB:      db,
+		ShowSQL: true,
 	}, &templateList, SearchParams, "p_tpl_info")
 
 	if err != nil {
