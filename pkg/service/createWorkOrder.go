@@ -20,9 +20,10 @@ import (
 
 func CreateWorkOrder(c *gin.Context) (err error) {
 	var (
-		taskList       []string
-		stateList      []interface{}
-		userInfo       system.SysUser
+		taskList  []string
+		stateList []interface{}
+		userInfo  system.SysUser
+		// 存储工单的状态信息
 		variableValue  []interface{}
 		processValue   process.Info
 		sendToUserList []system.SysUser
@@ -81,6 +82,9 @@ func CreateWorkOrder(c *gin.Context) (err error) {
 	}
 
 	err = json.Unmarshal(processValue.Structure, &processState.Structure)
+	if err != nil {
+		return
+	}
 
 	for _, node := range processState.Structure["nodes"] {
 		if node["clazz"] == "start" {

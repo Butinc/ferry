@@ -34,10 +34,10 @@ func ProcessStructure(c *gin.Context, processId int, workOrderId int) (result ma
 	)
 
 	err = orm.Eloquent.Model(&processValue).Where("id = ?", processId).Find(&processValue).Error
-	//if err != nil {
-	//	err = fmt.Errorf("查询流程失败，%v", err.Error())
-	//	return
-	//}
+	if err != nil {
+		err = fmt.Errorf("查询流程失败，%v", err.Error())
+		return
+	}
 
 	if processValue.Structure != nil && len(processValue.Structure) > 0 {
 		err = json.Unmarshal([]byte(processValue.Structure), &processStructureDetails)
